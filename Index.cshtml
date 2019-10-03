@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<section class="text-center">
+    <h1 class="display-2">@Model.MainTitle</h1>
+</section>
+<section style="background-color:black;color:" class="row text-center">
+    <aside class="col-lg-6 col-md-6 col-sm-12">
+        <img src="https://www.cbreptile.com/wp-content/uploads/2018/12/blue-eyed-lucy-for-sale-blu6.jpg"style="height:100px;" 
+style="width:100px; alt="Alternate Text" />
+    </aside>
+    <aside class="col-lg-6 col-md-6 col-sm-12">
+        <img src="http://cdn.shopify.com/s/files/1/0614/1237/products/bumblebee-ball-python-male-snake-reptile_grande.jpg?v=1538371126"style=""height:100px;" 
+style="width:100px;" alt="Alternate Text" />
+    </aside>
+    <aside class="col-lg-6 col-md-6 col-sm-12">
+        <img src="http://www.worldofballpythons.com/files/morphs/sunset-ball/003.jpg" style=""height:100px;" 
+style="width:100px;" alt="Alternate Text" />
+    </aside>de class="col-lg-6 col-md-6 col-sm-12">
+        <img src="https://i.pinimg.com/originals/df/ce/bf/dfcebf3d607b09126879e3a49f47fb7e.jpg" style=""height:100px;" 
+style="width:100px;" alt="Alternate Text" />
+    </aside>
+</section>
+<section>
+    @foreach (string movie in Model.morphs1)
+    {
+        <aside class="text-center">
+            <span class="display-3">Morph Name: </span>
+            <span class="display-4">@morphs</span>
+        </aside>
+    }
+</section>
+<section>
+    @foreach (var item in Model.morphs)
+    {
+        <aside>
+            <span>Movie Id: </span>
+            <span>@item.morphId</span>
+        </aside>
+        <aside>
+            <span>Title: </span>
+            <span>@item.ParentSnake</span>
+        </aside>
+        <aside>
+            <span>Director: </span>
+            <span>@item.Breeder</span>
+        </aside>
+        <aside>
+            <span>Rating: </span>
+            <span>@item.Style</span>
+        </aside>
+    }
+</section>
